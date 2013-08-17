@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # switch zsh theme depending on hostname
-case `hostname` in
+case `hostname -s` in
     "arkady") # (bogdanov)
         ZSH_THEME="minimal"
         ;;
@@ -9,7 +9,7 @@ case `hostname` in
         ZSH_THEME="gallois"
         ;;
     "ranna") # the sleepbringer
-        ZSH_THEME="arrow"
+        ZSH_THEME="nicoulaj"
         ;;
     *)
         ZSH_THEME="gozilla"
