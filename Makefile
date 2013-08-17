@@ -13,3 +13,7 @@ install-zsh:
 	rm -f ~/.zshrc
 	ln -s `pwd`/zsh/oh-my-zsh ~/.oh-my-zsh
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
+
+install-mplayer:
+	rm -f ~/.zshrc
+	ln -s `pwd`/mplayer ~/.mplayer
