@@ -21,5 +21,5 @@ install-zsh:
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
 
 install-mplayer:
-	rm -f ~/.zshrc
+	rm -rf ~/.mplayer
 	ln -s `pwd`/mplayer ~/.mplayer
