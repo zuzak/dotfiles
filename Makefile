@@ -1,9 +1,10 @@
-install: update install-vim install-git install-zsh
+install: update install-vim install-git install-zsh install-mplayer
 
 update:
 	git pull
 	git submodule init
 	git submodule update
+
 install-vim:
 	rm -rf ~/.vim ~/.vimrc
 	ln -s `pwd`/vim ~/.vim
