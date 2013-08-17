@@ -1,0 +1,30 @@
+source ~/.vim/bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+set nocompatible
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set backspace=2
+colo desert
+set nu
+set encoding=utf8
+set laststatus=2
+
+" disable hjkl
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
+autocmd Filetype jade setlocal ts=2 sw=2 expandtab
+
+" initiate pathogen
+
