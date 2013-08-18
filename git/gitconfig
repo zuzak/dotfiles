@@ -7,3 +7,6 @@
     ui = true
 [help]
     autocorrect = -1
+[push]
+    # similar to "simple" but b-compatible
+	default = current
