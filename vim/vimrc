@@ -35,9 +35,11 @@ let g:airline_enable_syntastic = 1
 let g:syntastic_html_checkers = ['w3']
 
 " gvim
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
-:set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+"set guifont=terminus
+
 
 " set terminal color column to a faint gray
 highlight ColorColumn ctermbg=232
