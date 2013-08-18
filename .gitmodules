@@ -16,3 +16,15 @@
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/bundle/wombat"]
+	path = vim/bundle/wombat
+	url = git://github.com/cschlueter/vim-wombat.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "vim/bundle/json"]
+	path = vim/bundle/json
+	url = https://github.com/vim-scripts/vim-json-bundle
+[submodule "vim/bundle/startify"]
+	path = vim/bundle/startify
+	url = https://github.com/vim-scripts/vim-startify

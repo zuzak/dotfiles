@@ -9,7 +9,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set backspace=2
-colo desert
+colorscheme wombat
 set nu
 set encoding=utf8
 set laststatus=2
@@ -26,5 +26,7 @@ noremap! <Right> <Esc>
 
 autocmd Filetype jade setlocal ts=2 sw=2 expandtab
 
-" initiate pathogen
-
+" airline vim config
+let g:airline_enable_branch = 1
+let g:airline_enable_syntastic = 1
+let g:syntastic_html_checkers = ['w3']

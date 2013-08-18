@@ -23,3 +23,6 @@ install-zsh:
 install-mplayer:
 	rm -rf ~/.mplayer
 	ln -s `pwd`/mplayer ~/.mplayer
+
+install-highlighters:
+	npm install -g csslint jsonlint jshint

@@ -5,5 +5,3 @@
     email = douglas@chippy.ch
 [color]
     ui = true
-[push]
-	default = simple
