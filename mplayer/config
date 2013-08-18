@@ -1,5 +1,10 @@
+# console
 msgcolor        =   1
+
+# audio
 alang           =   en,eng,english
+
+# subtitles
 ass             =   1
 ass-hinting     =   7
 ass-use-margins =   1
@@ -7,3 +12,16 @@ osd-duration    =   500
 osd-fractions   =   1
 slang           =   en,eng,english
 spuaa           =   4
+font            =   "DejaVu Sans"
+
+# networking
+prefer-ipv4     =   1
+
+# drivers
+ao              =   alsa
+
+# filters
+af              =   scaletempo
+
+[hd]            # 1080p files should use -profile=hd
+fs              =   1

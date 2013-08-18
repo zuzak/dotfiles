@@ -34,4 +34,11 @@ let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
 let g:syntastic_html_checkers = ['w3']
 
+" gvim
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
 
+" set terminal color column to a faint gray
+highlight ColorColumn ctermbg=232
+let &colorcolumn=join(range(81,999),",")
