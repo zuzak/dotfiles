@@ -26,7 +26,12 @@ noremap! <Right> <Esc>
 
 autocmd Filetype jade setlocal ts=2 sw=2 expandtab
 
+" filetype.vim seems to override the .json in the bundle
+au BufNewFile,BufRead *.json set filetype=json
+
 " airline vim config
 let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
 let g:syntastic_html_checkers = ['w3']
+
+
