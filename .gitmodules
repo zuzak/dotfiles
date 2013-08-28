@@ -28,3 +28,6 @@
 [submodule "vim/bundle/startify"]
 	path = vim/bundle/startify
 	url = https://github.com/vim-scripts/vim-startify
+[submodule "vim/bundle/latex-autocompile"]
+	path = vim/bundle/latex-autocompile
+	url = git://git.code.sf.net/p/atp-vim/code

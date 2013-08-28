@@ -44,3 +44,9 @@ set guioptions-=r  "remove right-hand scroll bar
 " set terminal color column to a faint gray
 highlight ColorColumn ctermbg=232
 let &colorcolumn=join(range(81,999),",")
+
+
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:atp_Compiler='bash'
+let g:LatexBox_latexmk_options = "-pvc -pdfps"

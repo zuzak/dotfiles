@@ -23,5 +23,15 @@ ao              =   alsa
 # filters
 af              =   scaletempo
 
+# post processing
+autoq           =   100
+vf              =   pp
+
 [hd]            # 1080p files should use -profile=hd
 fs              =   1
+
+[stream]        # streaming off LAN
+autosync        =   30
+framedrop       =   0
+mc              =   0
+
