@@ -1,0 +1,28 @@
+if [ -d /dcs ]; then
+    source /dcs/dcsproto/bash.bashrc
+else
+    source /aber/PROTOUSER/rc.bash
+fi
+
+function nonzero_return() {
+    RETVAL=$?
+    [ $RETVAL -ne 0 ] && echo "$RETVAL"
+}
+hname=`hostname -s`
+if [[ "$hname" == *c56* ]]
+then
+  # temporary delph overrides
+  hname="delph"
+  alias vim="vi"
+fi
+export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
+alias nethack="telnet nethack.alt.org"
+
+# force utf8
+export LANG=en_GB.UTF-8 LC_ALL=en_GB.UTF-8
+
+alias ls="ls --color"
+export PAGER=/usr/bin/less
+alias xyzzy="echo A hollow voice says \'Fool.\'"
+alias jgo="clear && javac *.java && java"
+alias whois="finger -s"

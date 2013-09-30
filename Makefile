@@ -1,4 +1,4 @@
-install: update install-vim install-git install-zsh install-mplayer
+install: update install-vim install-git install-zsh install-mplayer install-bash
 
 update:
 	git pull
@@ -20,9 +20,10 @@ install-zsh:
 	ln -s `pwd`/zsh/oh-my-zsh ~/.oh-my-zsh
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
 
+install-bash:
+	rm -f ~/.bashrc
+	ln -s `pwd`/bash/bashrc ~/.bashrc
+
 install-mplayer:
 	rm -rf ~/.mplayer
 	ln -s `pwd`/mplayer ~/.mplayer
-
-install-highlighters:
-	npm install -g csslint jsonlint jshint
