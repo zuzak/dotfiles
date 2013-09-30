@@ -1,5 +1,6 @@
 if [ -d /dcs ]; then
-    source /dcs/dcsproto/bash.bashrc
+#    source /dcs/dcsproto/bash.bashrc
+    true
 else
     source /aber/PROTOUSER/rc.bash
 fi
