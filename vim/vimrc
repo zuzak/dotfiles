@@ -1,52 +1,44 @@
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-syntax on
-filetype plugin indent on
-set nocompatible
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set backspace=2
-colorscheme wombat
-set nu
-set encoding=utf8
-set laststatus=2
+set nocompatible            " disable legacy
 
-" disable hjkl
-noremap  <Up> ""
+syntax enable
+colorscheme desert
+set number
+
+set encoding=utf-8
+set showcmd                 " display incomplete commands
+
+filetype plugin indent on " load file specific plugins/indentation
+
+" indentation
+set nowrap
+set tabstop=4               " set tab key to insert 4 spaces
+set shiftwidth=2            " set << and >> to move 4 spaces
+set expandtab               " convert tabs to spaces
+set autoindent              " use indentation of previous line
+set smartindent             " indent magically
+set textwidth=80            " oblige with tradition
+
+" search
+set hlsearch                " highlight search matches
+set incsearch               " incremental (instant) searching
+set ignorecase              " ignore case in searches
+set smartcase               " ...unless mixed-case
+set magic                   " greppy regexp
+
+set showmatch               " highlight matching brackets
+
+set laststatus=2            " always show status line
+
+
+" force hjkl usage
+noremap <Up> ""
 noremap! <Up> <Esc>
-noremap  <Down> ""
+noremap <Down> ""
 noremap! <Down> <Esc>
-noremap  <Left> ""
+noremap <Left> ""
 noremap! <Left> <Esc>
-noremap  <Right> ""
+noremap <Right> ""
 noremap! <Right> <Esc>
-
-autocmd Filetype jade setlocal ts=2 sw=2 expandtab
-
-" filetype.vim seems to override the .json in the bundle
-au BufNewFile,BufRead *.json set filetype=json
-
-" airline vim config
-let g:airline_enable_branch = 1
-let g:airline_enable_syntastic = 1
-let g:syntastic_html_checkers = ['w3']
-
-" gvim
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-"set guifont=terminus
-
-
-" set terminal color column to a faint gray
-highlight ColorColumn ctermbg=232
-let &colorcolumn=join(range(81,999),",")
-
-
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:atp_Compiler='bash'
-let g:LatexBox_latexmk_options = "-pvc -pdfps"

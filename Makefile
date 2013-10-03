@@ -1,4 +1,4 @@
-install: update install-vim install-git install-zsh install-mplayer install-bash
+install: update install-vim install-git install-bash
 
 update:
 	git pull
