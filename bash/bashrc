@@ -12,6 +12,14 @@ then
 else
     alias ls="ls --color"
 fi
+
+if [[ "$hname" == arkady ]]
+then
+  if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    startx
+  fi
+fi
+
 export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
 alias nethack="telnet nethack.alt.org"
 
