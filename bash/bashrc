@@ -12,7 +12,7 @@ else
     alias ls="ls --color"
 fi
 
-if [[ "$hname" == arkady ]]
+if [[ "$hname" == saxifrage ]]
 then
   if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
@@ -29,6 +29,5 @@ export PAGER=/usr/bin/less
 export EDITOR="vim"
 alias xyzzy="echo A hollow voice says \'Fool.\'"
 alias jgo="clear && javac *.java && java"
-alias whois="finger -s"
 
 PATH=$PATH:~/bin
