@@ -20,7 +20,7 @@ then
 fi
 
 export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
-export TERM="linux" # nothing plays well with st
+export TERM="xterm" # nothing plays well with st
 
 # force utf8
 export LANG=en_GB.UTF-8 LC_ALL=en_GB.UTF-8
