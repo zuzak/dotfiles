@@ -18,7 +18,7 @@ filetype plugin indent on " load file specific plugins/indentation
 set nowrap
 set tabstop=4               " set tab key to insert 4 spaces
 set shiftwidth=2            " set << and >> to move 4 spaces
-set expandtab               " convert tabs to spaces
+"set expandtab               " convert tabs to spaces
 set autoindent              " use indentation of previous line
 set smartindent             " indent magically
 set textwidth=80            " oblige with tradition
