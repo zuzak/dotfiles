@@ -17,6 +17,7 @@ then
   if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
   fi
+  alias za="zathura"
 fi
 
 export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
@@ -29,5 +30,15 @@ export PAGER=/usr/bin/less
 export EDITOR="vim"
 alias xyzzy="echo A hollow voice says \'Fool.\'"
 alias jgo="clear && javac *.java && java"
+alias style="php ~/git/code-utils/stylize.php "
+
+# append, not overwrite
+shopt -s histappend
+shopt -s cmdhist
+PROMPT_COMMAND='history -a'
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+HISTTIMEFORMAT='%F %T '
+
 
 PATH=$PATH:~/bin
