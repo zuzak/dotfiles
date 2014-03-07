@@ -1,4 +1,4 @@
-install: update install-vim install-git install-bash install-mplayer
+install: update install-vim install-git install-bash install-mplayer install-dwm
 
 update:
 	git pull
@@ -27,3 +27,7 @@ install-bash:
 install-mplayer:
 	rm -rf ~/.mplayer
 	ln -s `pwd`/mplayer ~/.mplayer
+
+install-dwm:
+	rm ~/.xinitrc
+	ln -s `pwd`/dwm/xinitrc ~/.xinitrc

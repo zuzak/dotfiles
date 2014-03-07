@@ -1,0 +1,27 @@
+while true;
+do
+  CAPS=`xset -q | grep Caps | awk '/\ /"" {print $4}'`
+  UPTIME=`uptime | awk '/\ /"" {print $9}'`
+  BATTERYACTION=`acpi -a -b | awk '/\ /"" {print $3}'`
+  BATTERY=`acpi -b | awk '/,\ / "" {print $4}'`
+  BATTTERY=$BATTERY%?
+
+  if acpi -a | grep off-line > /dev/null; then
+    BATTERYACTION='·';
+  else
+    BATTERYACTION='+';
+  fi
+  if [ $CAPS = "on" ]; then
+    CAPS='* '
+  else
+    CAPS=''
+  fi
+
+  TIME=`date -u`
+
+  xsetroot -name "$CAPS$BATTERYACTION$BATTERY $UPTIME $TIME"
+
+done &
+xmodmap ~/.Xmodmap
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+exec dwm

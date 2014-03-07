@@ -1,4 +1,0 @@
-while true;
-do
-  xsetroot -name "`TZ"Europe/London" date`";
-done &
