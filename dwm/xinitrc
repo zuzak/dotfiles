@@ -5,6 +5,7 @@ do
   BATTERYACTION=`acpi -a -b | awk '/\ /"" {print $3}'`
   BATTERY=`acpi -b | awk '/,\ / "" {print $4}'`
   BATTTERY=$BATTERY%?
+  MUTE=`amixer get Master | tail -n1 | grep -c off`
 
   if acpi -a | grep off-line > /dev/null; then
     BATTERYACTION='·';
@@ -16,10 +17,15 @@ do
   else
     CAPS=''
   fi
+  if [ $MUTE = "0" ]; then
+	VOLUME=""
+  else
+	VOLUME="[ MUTE ] "
+  fi
 
   TIME=`date -u`
 
-  xsetroot -name "$CAPS$BATTERYACTION$BATTERY $UPTIME $TIME"
+  xsetroot -name "$VOLUME$CAPS$BATTERYACTION$BATTERY $UPTIME $TIME"
 
 done &
 xmodmap ~/.Xmodmap
