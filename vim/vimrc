@@ -59,3 +59,9 @@ autocmd InsertLeave * match Error /\s\+$/
 
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
+
+"set guioptions-=m " no menu bar
+set guioptions-=T " no toolbar
+set guioptions-=r " no right scroll
+set guioptions-=L " no left scroll
+set guifont=Terminus

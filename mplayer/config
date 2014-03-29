@@ -13,7 +13,7 @@ osd-fractions   =   1
 slang           =   en,eng,english
 spuaa           =   4
 font            =   "DejaVu Sans"
-ass-font-scale =0.5
+#ass-font-scale =0.5
 
 # networking
 prefer-ipv4     =   1
