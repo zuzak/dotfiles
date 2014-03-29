@@ -3,7 +3,6 @@ if [[ "$hname" == *c56* ]]
 then
   # temporary delph overrides
   hname="delph"
-  alias vim="vi"
 fi
 
 if [[ "$hname" == *imac* ]]
@@ -12,15 +11,35 @@ then
 else
     alias ls="ls --color"
 fi
+
+if [[ "$hname" == saxifrage ]]
+then
+  if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    startx
+  fi
+  alias za="zathura"
+fi
+
 export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
-alias nethack="telnet nethack.alt.org"
+export TERM="xterm" # nothing plays well with st
 
 # force utf8
 export LANG=en_GB.UTF-8 LC_ALL=en_GB.UTF-8
 
 export PAGER=/usr/bin/less
+export EDITOR="vim"
 alias xyzzy="echo A hollow voice says \'Fool.\'"
 alias jgo="clear && javac *.java && java"
-alias whois="finger -s"
+alias style="php ~/git/code-utils/stylize.php "
+alias nao="telnet alt.org"
+
+# append, not overwrite
+shopt -s histappend
+shopt -s cmdhist
+PROMPT_COMMAND='history -a'
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+HISTTIMEFORMAT='%F %T '
+
 
 PATH=$PATH:~/bin

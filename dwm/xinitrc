@@ -1,0 +1,33 @@
+while true;
+do
+  CAPS=`xset -q | grep Caps | awk '/\ /"" {print $4}'`
+  UPTIME=`uptime | awk '/\ /"" {print $9}'`
+  BATTERYACTION=`acpi -a -b | awk '/\ /"" {print $3}'`
+  BATTERY=`acpi -b | awk '/,\ / "" {print $4}'`
+  BATTTERY=$BATTERY%?
+  MUTE=`amixer get Master | tail -n1 | grep -c off`
+
+  if acpi -a | grep off-line > /dev/null; then
+    BATTERYACTION='·';
+  else
+    BATTERYACTION='+';
+  fi
+  if [ $CAPS = "on" ]; then
+    CAPS='* '
+  else
+    CAPS=''
+  fi
+  if [ $MUTE = "0" ]; then
+	VOLUME=""
+  else
+	VOLUME="[ MUTE ] "
+  fi
+
+  TIME=`date -u`
+
+  xsetroot -name "$VOLUME$CAPS$BATTERYACTION$BATTERY $UPTIME $TIME"
+
+done &
+xmodmap ~/.Xmodmap
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+exec dwm

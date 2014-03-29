@@ -5,6 +5,7 @@ msgcolor        =   1               # enable colorful console output
 alang           =   en,eng,english  # priority list of audio languages
 
 # subtitles
+<<<<<<< HEAD
 ass             =   1               # turn on SSA/ASS subtitle rendering
 ass-hinting     =   7               # hint if unscaled, don't if scaled
 ass-use-margins =   1               # use widescreen spaces for subtitles

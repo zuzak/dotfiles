@@ -1,3 +1,5 @@
+" .vimrc
+" load plugins
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
@@ -28,9 +30,9 @@ set ignorecase              " ignore case in searches
 set smartcase               " ...unless mixed-case
 set magic                   " greppy regexp
 
-set showmatch               " highlight matching brackets
-
 set laststatus=2            " always show status line
+
+"match Error /\s\+$/          " give trailing whitespace the error highlight
 
 
 " force hjkl usage
@@ -42,3 +44,24 @@ noremap <Left> ""
 noremap! <Left> <Esc>
 noremap <Right> ""
 noremap! <Right> <Esc>
+
+" override filetype.vim for JSON files (it thinks it's .js)
+autocmd BufNewFile *.json set filetype=json
+
+" override four tabs for javascript
+autocmd Filetype jade setlocal ts=2 sw=2
+autocmd Filetype js setlocal ts=2 sw=2
+
+" highlight extraneous whitespace (ignoring current line)
+autocmd BufEnter * match Error /\s\+$/
+autocmd InsertEnter * match Error /\s\+\%#\@<!$/
+autocmd InsertLeave * match Error /\s\+$/
+
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+
+"set guioptions-=m " no menu bar
+set guioptions-=T " no toolbar
+set guioptions-=r " no right scroll
+set guioptions-=L " no left scroll
+set guifont=Terminus
