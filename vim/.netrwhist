@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/zuzak/git/nh343-nao'
+let g:netrw_dirhist_2='/home/zuzak/git/ircbot2'
+let g:netrw_dirhist_3='/home/zuzak/git/ircbot2/modules'
+let g:netrw_dirhist_4='/home/zuzak/git/fiscal/app/routes'

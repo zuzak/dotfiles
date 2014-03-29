@@ -7,6 +7,7 @@ case `hostname -s` in
         ;;
     "saraneth") # the binder
         ZSH_THEME="gallois"
+        alias phpstylize="php ~/git/code-utils/stylize.php"
         ;;
     "ranna") # the sleepbringer
         ZSH_THEME="nicoulaj"
@@ -31,3 +32,4 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export EDITOR=vim
+stty ixany

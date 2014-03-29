@@ -1,37 +1,36 @@
 # console
-msgcolor        =   1
+msgcolor        =   1               # enable colorful console output
 
 # audio
-alang           =   en,eng,english
+alang           =   en,eng,english  # priority list of audio languages
 
 # subtitles
-ass             =   1
-ass-hinting     =   7
-ass-use-margins =   1
-osd-duration    =   500
-osd-fractions   =   1
-slang           =   en,eng,english
-spuaa           =   4
-font            =   "DejaVu Sans"
+ass             =   1               # turn on SSA/ASS subtitle rendering
+ass-hinting     =   7               # hint if unscaled, don't if scaled
+ass-use-margins =   1               # use widescreen spaces for subtitles
+osd-duration    =   500             # messages appear for 500ms
+osd-fractions   =   1               # show milliseconds on on screen display
+slang           =   en,eng,english  # priority list of subtitle languages
+spuaa           =   4               # gaussian blur on DVDs etc
+font            =   "DejaVu Sans"   # font for subtitles and OSD
 
 # networking
-prefer-ipv4     =   1
+prefer-ipv4     =   1               # use IPv4 over IPv6 where available
 
 # drivers
-ao              =   alsa
+ao              =   alsa            # priority list of audio output drivers
 
 # filters
-af              =   scaletempo
+af              =   scaletempo      # adjust pitch on tempo change
 
 # post processing
-autoq           =   100
-vf              =   pp
+autoq           =   100             # turn off post processing CPU if too high
+vf              =   pp              # enable post processing video filter
 
 [hd]            # 1080p files should use -profile=hd
-fs              =   1
+fs              =   1               # turn on full screen
 
 [stream]        # streaming off LAN
-autosync        =   30
-framedrop       =   0
-mc              =   0
+autosync        =   30              # react to bad A/V sync nicely
+framedrop       =   0               # skip frames if A/V is lagging
 
