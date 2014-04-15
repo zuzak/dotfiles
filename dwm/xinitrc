@@ -23,7 +23,7 @@ do
 	VOLUME="[ MUTE ] "
   fi
 
-  TIME=`date -u`
+  TIME=`date`
 
   xsetroot -name "$VOLUME$CAPS$BATTERYACTION$BATTERY $UPTIME $TIME"
 

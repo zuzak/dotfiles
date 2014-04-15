@@ -17,7 +17,7 @@ then
   if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
   fi
-  alias za="zathura"
+  alias za="zathura --fork"
 fi
 
 export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
