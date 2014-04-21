@@ -4,13 +4,14 @@ do
   UPTIME=`uptime | awk '/\ /"" {print $9}'`
   BATTERYACTION=`acpi -a -b | awk '/\ /"" {print $3}'`
   BATTERY=`acpi -b | awk '/,\ / "" {print $4}'`
-  BATTTERY=$BATTERY%?
+  BATTERY="${BATTERY%?}" # rm last char
   MUTE=`amixer get Master | tail -n1 | grep -c off`
 
   if acpi -a | grep off-line > /dev/null; then
     BATTERYACTION='·';
+	BATTERY="${BATTERY%?}"
   else
-    BATTERYACTION='+';
+    BATTERYACTION='charging at ';
   fi
   if [ $CAPS = "on" ]; then
     CAPS='* '
@@ -23,6 +24,15 @@ do
 	VOLUME="[ MUTE ] "
   fi
 
+  if [ "$BATTERY" -gt "10" ]; then
+    BATTERY="$BATTERY%"
+  else
+    BATTERY="$BATTERY%!"
+  fi
+  if [ "$BATTERY" -gt "99" ]; then
+	BATTERYACTION="charged to"
+  fi
+
   TIME=`date`
 
   xsetroot -name "$VOLUME$CAPS$BATTERYACTION$BATTERY $UPTIME $TIME"
@@ -31,3 +41,5 @@ done &
 xmodmap ~/.Xmodmap
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 exec dwm
+
+# vi:syntax=sh
