@@ -18,7 +18,7 @@ filetype plugin indent on " load file specific plugins/indentation
 set nowrap
 set tabstop=4               " set tab key to insert 2 spaces
 set shiftwidth=4            " set << and >> to move 2 spaces
-set expandtab               " convert tabs to spaces
+"set expandtab               " convert tabs to spaces
 set autoindent              " use indentation of previous line
 set smartindent             " indent magically
 set textwidth=80            " oblige with tradition
@@ -49,11 +49,11 @@ noremap! <Right> <Esc>
 autocmd BufNewFile *.json set filetype=json
 
 " override four tabs for javascript
-autocmd Filetype jade setlocal ts=2 sw=2
-autocmd Filetype js setlocal ts=2 sw=2
+"autocmd Filetype jade setlocal ts=2 sw=2
+"autocmd Filetype js setlocal ts=2 sw=2
 
 autocmd Filetype php setlocal noexpandtab
-
+autocmd Filetype tex setlocal spell
 " highlight extraneous whitespace (ignoring current line)
 autocmd BufEnter * match Error /\s\+$/
 autocmd InsertEnter * match Error /\s\+\%#\@<!$/
@@ -70,3 +70,5 @@ set guifont=monofur
 
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set colorcolumn=81,82,83,84,85
+
+let g:JSHintHighlightErrorLine = 0

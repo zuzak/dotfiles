@@ -29,8 +29,9 @@ vf              =   pp              # enable post processing video filter
 
 [hd]            # 1080p files should use -profile=hd
 fs              =   1               # turn on full screen
+ass-bottom-margin = 100
 
 [stream]        # streaming off LAN
 autosync        =   30              # react to bad A/V sync nicely
 framedrop       =   0               # skip frames if A/V is lagging
-
+cache           = 4000

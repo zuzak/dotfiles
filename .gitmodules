@@ -34,3 +34,9 @@
 [submodule "vim/bundle/phpindent"]
 	path = vim/bundle/phpindent
 	url = git://github.com/2072/PHP-Indenting-for-VIm.git
+[submodule "compose/rfc1345"]
+	path = compose/rfc1345
+	url = https://gist.github.com/9318207.git
+[submodule "vim/bundle/jshint2"]
+	path = vim/bundle/jshint2
+	url = https://github.com/walm/jshint.vim.git
