@@ -40,3 +40,6 @@
 [submodule "vim/bundle/jshint2"]
 	path = vim/bundle/jshint2
 	url = https://github.com/walm/jshint.vim.git
+[submodule "vim/bundle/synastic"]
+	path = vim/bundle/synastic
+	url = git://github.com/scrooloose/syntastic.git
