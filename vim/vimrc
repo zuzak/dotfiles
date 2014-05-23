@@ -70,5 +70,3 @@ set guifont=monofur
 
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set colorcolumn=81,82,83,84,85
-
-let g:JSHintHighlightErrorLine = 0
