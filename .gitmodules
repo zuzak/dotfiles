@@ -49,3 +49,6 @@
 [submodule "vim/bundle/node"]
 	path = vim/bundle/node
 	url = https://github.com/moll/vim-node.git
+[submodule "vim/bundle/pikesyntax"]
+	path = vim/bundle/pikesyntax
+	url = https://github.com/vim-scripts/pike.vim
