@@ -54,6 +54,7 @@ autocmd BufNewFile *.json set filetype=json
 
 autocmd Filetype php setlocal noexpandtab
 autocmd Filetype tex setlocal spell
+autocmd Filetype ruby setlocal expandtab
 " highlight extraneous whitespace (ignoring current line)
 autocmd BufEnter * match Error /\s\+$/
 autocmd InsertEnter * match Error /\s\+\%#\@<!$/
@@ -66,7 +67,9 @@ set guioptions-=m " no menu bar
 set guioptions-=T " no toolbar
 set guioptions-=r " no right scroll
 set guioptions-=L " no left scroll
-set guifont=monofur
+"set guifont=monofur
 
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set colorcolumn=81,82,83,84,85
+
+let g:syntastic_html_checkers = ['w3']
