@@ -52,3 +52,6 @@
 [submodule "vim/bundle/pikesyntax"]
 	path = vim/bundle/pikesyntax
 	url = https://github.com/vim-scripts/pike.vim
+[submodule "vim/bundle/vimpuppet"]
+	path = vim/bundle/vimpuppet
+	url = https://github.com/rodjek/vim-puppet
