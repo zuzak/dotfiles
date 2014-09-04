@@ -21,7 +21,6 @@ set shiftwidth=4            " set << and >> to move 2 spaces
 "set expandtab               " convert tabs to spaces
 set autoindent              " use indentation of previous line
 set smartindent             " indent magically
-set textwidth=80            " oblige with tradition
 
 " search
 set hlsearch                " highlight search matches
