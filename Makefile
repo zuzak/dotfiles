@@ -1,4 +1,5 @@
 install: update install-vim install-git install-bash install-mplayer install-dwm install-compose
+install-basic: update install-vim install-git install-bash
 
 update:
 	git pull
@@ -29,8 +30,8 @@ install-mplayer:
 	ln -s `pwd`/mplayer ~/.mplayer
 
 install-dwm:
-	rm ~/.xinitrc
+	rm -f ~/.xinitrc
 	ln -s `pwd`/dwm/xinitrc ~/.xinitrc
 install-compose:
-	rm ~/.XCompose
+	rm -f ~/.XCompose
 	ln -s `pwd`/compose/rfc1345/compose.pre ~/.XCompose
