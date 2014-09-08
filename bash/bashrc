@@ -22,7 +22,7 @@ fi
 
 if [[ `whoami` == vagrant ]]
 then
-	export PS1="\[\e[00;34m\]\H\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;32m\]\w>\[\e[0m\]"
+	export PS1="\[\e[00;34m\]\H\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;32m\]\w>\[\e[0m\] "
 else
 	export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
 fi
