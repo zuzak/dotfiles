@@ -55,3 +55,6 @@
 [submodule "vim/bundle/vimpuppet"]
 	path = vim/bundle/vimpuppet
 	url = https://github.com/rodjek/vim-puppet
+[submodule "vim/bundle/python-mode"]
+	path = vim/bundle/python-mode
+	url = git://github.com/klen/python-mode.git
