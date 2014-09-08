@@ -1,5 +1,15 @@
 install: update install-vim install-git install-bash install-mplayer install-dwm install-compose
-install-basic: update install-vim install-git install-bash
+basic: install-vim install-git install-bash
+
+quick:
+	git fetch origin
+	reslog=$(git log HEAD..origin/master --oneline)
+	if [ "${reslog}" != "" ] ; then \
+		git merge origin/master \
+		git submodule foreach git pull \
+	else \
+		exit 0; \
+	fi
 
 update:
 	git pull
