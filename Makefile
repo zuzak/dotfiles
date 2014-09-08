@@ -3,8 +3,7 @@ install-basic: update install-vim install-git install-bash
 
 update:
 	git pull
-	git submodule init
-	git submodule update
+	git submodule foreach git pull
 
 install-vim:
 	rm -rf ~/.vim ~/.vimrc
