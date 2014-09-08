@@ -1,4 +1,6 @@
 " .vimrc
+" this file is managed by git
+" github.com/zuzak/dotfiles
 " load plugins
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
