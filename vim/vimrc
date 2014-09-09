@@ -70,7 +70,12 @@ set guioptions-=r " no right scroll
 set guioptions-=L " no left scroll
 "set guifont=monofur
 
+let g:syntastic_html_checkers = ['w3']
+
+if v:version < 703
+	finish
+endif
+
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set colorcolumn=81,82,83,84,85
 
-let g:syntastic_html_checkers = ['w3']
