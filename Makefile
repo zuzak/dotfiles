@@ -14,7 +14,7 @@ update:
 	reslog=$(git log HEAD..origin/master --oneline)
 	if [ "${reslog}" != "" ] ; then \
 		git merge origin/master \
-		git submodule foreach git pull \
+		git submodule foreach git pull ; \
 	fi
 
 vim:
