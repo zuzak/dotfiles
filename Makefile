@@ -35,6 +35,7 @@ zsh:
 bash:
 	rm -f ~/.bashrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
+	source ~/.bashrc
 
 mplayer:
 	rm -rf ~/.mplayer
