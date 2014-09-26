@@ -1,36 +1,46 @@
-install: update install-vim install-git install-bash install-mplayer install-dwm install-compose
+most: init update vim git bash
+all: init update vim git bash zsh mplayer dwm
 
-update:
+init:
 	git pull
 	git submodule init
 	git submodule update
+	git submodule
+	git submodule init
+	git submodule update
 
-install-vim:
+update:
+	git fetch origin
+	reslog=$(git log HEAD..origin/master --oneline)
+	if [ "${reslog}" != "" ] ; then \
+		git merge origin/master \
+		git submodule foreach git pull ; \
+	fi
+
+vim:
 	rm -rf ~/.vim ~/.vimrc
 	ln -s `pwd`/vim ~/.vim
 	ln -s `pwd`/vim/vimrc ~/.vimrc
 
-install-git:
+git:
 	rm -f ~/.gitconfig
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 
-install-zsh:
+zsh:
 	rm -f ~/.zshrc
 	rm -rf ~/.oh-my-zsh
 	ln -s `pwd`/zsh/oh-my-zsh ~/.oh-my-zsh
 	ln -s `pwd`/zsh/zshrc ~/.zshrc
 
-install-bash:
+bash:
 	rm -f ~/.bashrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
+	source ~/.bashrc
 
-install-mplayer:
+mplayer:
 	rm -rf ~/.mplayer
 	ln -s `pwd`/mplayer ~/.mplayer
 
-install-dwm:
-	rm ~/.xinitrc
+dwm:
+	rm -f ~/.xinitrc
 	ln -s `pwd`/dwm/xinitrc ~/.xinitrc
-install-compose:
-	rm ~/.XCompose
-	ln -s `pwd`/compose/rfc1345/compose.pre ~/.XCompose
