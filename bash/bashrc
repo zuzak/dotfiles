@@ -20,7 +20,13 @@ then
   alias za="zathura --fork"
 fi
 
-export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
+if [[ "$hname" == saraneth ]]
+then
+	export PS1="\[\e[00;33m\]$hname \[\e[0m\]\[\e[32;1m\]\w> \[\e[0m\]"
+else
+	export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
+fi
+
 export TERM="xterm" # nothing plays well with st
 
 # force utf8
