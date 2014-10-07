@@ -8,9 +8,11 @@ then
   hname="delph"
 fi
 
-if [[ "$hname" == *imac* ]]
+if [[ "$hname" == *Mac* ]]
 then
-    hname="apple"
+	hname="mac"
+	export PYTHONPATH="$HOME/local/lib/python2.7/site-packages"
+	export PATH="$PATH:$PYTHONPATH"
 else
     alias ls="ls --color"
 fi
