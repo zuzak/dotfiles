@@ -25,11 +25,16 @@ then
   alias za="zathura --fork"
 fi
 
+if [[ "$hname" == saraneth ]]
+then
+	export PS1="\[\e[00;33m\]$hname \[\e[0m\]\[\e[32;1m\]\w> \[\e[0m\]"
+else
+	export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
+fi
+
 if [[ `whoami` == vagrant ]]
 then
 	export PS1="\[\e[00;34m\]\H\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;32m\]\w>\[\e[0m\] "
-else
-	export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
 fi
 
 export TERM="xterm" # nothing plays well with st
