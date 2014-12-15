@@ -17,6 +17,11 @@ else
     alias ls="ls --color"
 fi
 
+if [ -f "/etc/redhat=release" ]
+then
+	alias apt-get='yum'
+fi
+
 if [[ "$hname" == saxifrage ]]
 then
   if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
