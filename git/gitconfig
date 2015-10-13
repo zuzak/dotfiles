@@ -10,3 +10,5 @@
 [push]
     # similar to "simple" but b-compatible
 	default = current
+[gitreview]
+	username = dog2

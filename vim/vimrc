@@ -1,9 +1,11 @@
 " .vimrc
 " this file is managed by git
 " github.com/zuzak/dotfiles
+"
 " load plugins
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+execute pathogen#helptags()
 
 set nocompatible            " disable legacy
 
@@ -61,6 +63,18 @@ autocmd BufEnter * match Error /\s\+$/
 autocmd InsertEnter * match Error /\s\+\%#\@<!$/
 autocmd InsertLeave * match Error /\s\+$/
 
+"Use TAB to complete when typing words, else inserts TABs as usual.
+"Uses dictionary and source files to find matching words to complete.
+function! Tab_Or_Complete()
+    if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+        return "\<C-N>"
+    else
+        return "\<Tab>"
+    endif
+endfunction
+inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+highlight Pmenu ctermfg=grey ctermbg=darkgrey
+
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
@@ -71,6 +85,7 @@ set guioptions-=L " no left scroll
 "set guifont=monofur
 
 let g:syntastic_html_checkers = ['w3']
+let g:syntastic_vim_checkers = ['vint']
 
 if v:version < 703
 	finish
@@ -79,3 +94,13 @@ endif
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set colorcolumn=81,82,83,84,85
 
+let g:pymode_lint_write = 0
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+
+let g:syntastic_python_checkers = [ 'python', 'pep8', 'pyflakes' ]
+
+" https://github.com/kien/rainbow_parentheses.vim
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
