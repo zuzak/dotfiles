@@ -65,3 +65,8 @@ HISTTIMEFORMAT='%F %T '
 
 PATH=~/bin:$PATH
 PATH=$PATH:~/git/arcanist/bin:~/git/libphutil/bin
+
+if [[ `screen -ls | grep irc | grep Detached` ]]
+then
+	screen -dr irc
+fi
