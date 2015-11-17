@@ -104,3 +104,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+":w!! to save as root
+ca w!! w !sudo tee >/dev/null "%"
