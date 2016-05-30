@@ -1,5 +1,6 @@
 [core]
     editor = vim
+	excludesfile = /home/douglas/.gitignore
 [user]
     name = Douglas Gardner
     email = douglas@chippy.ch

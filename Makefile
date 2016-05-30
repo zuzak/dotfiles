@@ -23,8 +23,9 @@ vim:
 	ln -s `pwd`/vim/vimrc ~/.vimrc
 
 git:
-	rm -f ~/.gitconfig
+	rm -f ~/.gitconfig ~/.gitignore
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
+	ln -s `pwd`/git/gitignore ~/.gitignore
 
 zsh:
 	rm -f ~/.zshrc
