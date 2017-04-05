@@ -87,6 +87,8 @@ set guioptions-=L " no left scroll
 let g:syntastic_html_checkers = ['w3']
 let g:syntastic_vim_checkers = ['vint']
 
+let g:email = 'douglas@chippy.ch'
+
 if v:version < 703
 	finish
 endif
@@ -107,3 +109,5 @@ au Syntax * RainbowParenthesesLoadBraces
 
 ":w!! to save as root
 ca w!! w !sudo tee >/dev/null "%"
+
+set shell=/bin/bash
