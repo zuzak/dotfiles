@@ -12,10 +12,11 @@ fi
 
 if [[ "$hname" == *HOD* ]]
 then
-	hname="mac"
-	export PYTHONPATH="$HOME/local/lib/python2.7/site-packages"
-	export PATH="$PATH:$PYTHONPATH"
-	alias ls="ls -G"
+  hname="mac"
+  export PYTHONPATH="$HOME/local/lib/python2.7/site-packages"
+  export PATH="$PATH:$PYTHONPATH"
+  test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+  alias ls="ls -G"
 else
     alias ls="ls --color"
 fi
