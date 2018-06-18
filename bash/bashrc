@@ -69,11 +69,11 @@ PATH=~/bin:$PATH
 
 if [[ "$hname" == saraneth ]]
 then
-	export PS1="\[\e[00;33m\]$hname \[\e[0m\]\[\e[32;1m\]\w> \[\e[0m\]"
-	if [[ `screen -ls | grep irc | grep Detached` ]]
-	then
-		screen -dr irc
-	fi
+  export PS1="\[\e[00;33m\]$hname \[\e[0m\]\[\e[32;1m\]\w> \[\e[0m\]"
+  if [[ `screen -ls | grep irc | grep Detached` ]]
+  then
+    screen -dr irc
+  fi
 else
 	export PS1="\[\e[36;1m\]$hname \[\e[32;1m\]\w> \[\e[0m\]"
 fi
