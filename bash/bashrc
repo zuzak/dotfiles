@@ -21,9 +21,8 @@ else
     alias ls="ls --color"
 fi
 
-if [ -f "/etc/redhat=release" ]
-then
-	alias apt-get='yum'
+if [ -f "/etc/redhat=release" ]; then
+  alias apt-get='yum'
 fi
 
 if [[ "$hname" == saxifrage ]]
@@ -37,7 +36,7 @@ fi
 
 if [[ `whoami` == vagrant ]]
 then
-	export PS1="\[\e[00;34m\]\H\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;32m\]\w>\[\e[0m\] "
+  export PS1="\[\e[00;34m\]\H\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;32m\]\w>\[\e[0m\] "
 fi
 
 export TERM="xterm" # nothing plays well with st
