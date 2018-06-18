@@ -13,6 +13,7 @@ then
 	hname="mac"
 	export PYTHONPATH="$HOME/local/lib/python2.7/site-packages"
 	export PATH="$PATH:$PYTHONPATH"
+	alias ls="ls -G"
 else
     alias ls="ls --color"
 fi
