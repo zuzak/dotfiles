@@ -22,7 +22,7 @@ filetype plugin indent on " load file specific plugins/indentation
 set nowrap
 set tabstop=4               " set tab key to insert 2 spaces
 set shiftwidth=4            " set << and >> to move 2 spaces
-"set expandtab               " convert tabs to spaces
+set expandtab               " convert tabs to spaces
 set autoindent              " use indentation of previous line
 set smartindent             " indent magically
 
@@ -52,8 +52,8 @@ noremap! <Right> <Esc>
 autocmd BufNewFile *.json set filetype=json
 
 " override four tabs for javascript
-"autocmd Filetype jade setlocal ts=2 sw=2
-"autocmd Filetype js setlocal ts=2 sw=2
+autocmd Filetype jade setlocal ts=2 sw=2
+autocmd Filetype js setlocal ts=2 sw=2
 
 autocmd Filetype php setlocal noexpandtab
 autocmd Filetype tex setlocal spell
