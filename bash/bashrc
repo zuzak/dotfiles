@@ -47,7 +47,7 @@ export EDITOR="vim"
 alias xyzzy="echo A hollow voice says \'Fool.\'"
 alias jgo="clear && javac *.java && java"
 alias style="php ~/git/code-utils/stylize.php "
-alias nao="telnet alt.org"
+alias nao="ssh nethack@alt.org"
 
 # append, not overwrite
 shopt -s histappend
