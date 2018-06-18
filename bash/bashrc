@@ -8,7 +8,7 @@ then
   hname="delph"
 fi
 
-if [[ "$hname" == *Mac* ]]
+if [[ "$hname" == *HOD* ]]
 then
 	hname="mac"
 	export PYTHONPATH="$HOME/local/lib/python2.7/site-packages"
