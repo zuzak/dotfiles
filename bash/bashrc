@@ -1,6 +1,7 @@
 #!/bin/bash
 # this file is managed by git
 # github.com/zuzak/dotfiles
+# vim:ts=2:et:list
 
 hname=`hostname -s`
 if [[ "$hname" == *c56* ]]
