@@ -67,6 +67,8 @@ PROMPT_COMMAND='history -a'
 
 PATH=~/bin:$PATH
 
+export GPG_TTY=$(tty) # sometimes this isn't automatically set
+
 if [[ "$hname" == saraneth ]]
 then
   export PS1="\[\e[00;33m\]$hname \[\e[0m\]\[\e[32;1m\]\w> \[\e[0m\]"
