@@ -64,3 +64,15 @@
 [submodule "vim/bundle/template"]
 	path = vim/bundle/template
 	url = git@github.com:zuzak/vim-template.git
+[submodule "vim/bundle/vim-json"]
+	path = vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json
+[submodule "vim/bundle/Dockerfile.vim"]
+	path = vim/bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim
+[submodule "vim/bundle/ejs-syntax"]
+	path = vim/bundle/ejs-syntax
+	url = https://github.com/nikvdp/ejs-syntax
+[submodule "vim/bundle/vim-airline-themes"]
+	path = vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
