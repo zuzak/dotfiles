@@ -108,3 +108,5 @@ set shell=/bin/bash
 
 
 set modelines=5
+
+let g:airline#extensions#tabline#enabled = 1
