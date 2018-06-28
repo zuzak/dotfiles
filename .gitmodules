@@ -19,9 +19,6 @@
 [submodule "vim/bundle/wombat"]
 	path = vim/bundle/wombat
 	url = git://github.com/cschlueter/vim-wombat.git
-[submodule "vim/bundle/json"]
-	path = vim/bundle/json
-	url = https://github.com/elzr/vim-json
 [submodule "vim/bundle/startify"]
 	path = vim/bundle/startify
 	url = https://github.com/vim-scripts/vim-startify

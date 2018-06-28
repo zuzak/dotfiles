@@ -48,9 +48,6 @@ noremap! <Left> <Esc>
 noremap <Right> ""
 noremap! <Right> <Esc>
 
-" override filetype.vim for JSON files (it thinks it's .js)
-autocmd BufNewFile *.json set filetype=json
-
 " override four tabs for javascript
 autocmd Filetype jade setlocal ts=2 sw=2
 autocmd Filetype js setlocal ts=2 sw=2
