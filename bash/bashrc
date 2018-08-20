@@ -147,7 +147,9 @@ prettify()
   highlight -O xterm256 --syntax $1
 }
 
-
+if [ -x "$(command -v mdcat)" ]; then
+    alias readme="mdcat README.md"
+fi
 
 alias kc=kubectl
 alias chomp="perl -pi -e 'chomp if eof'"
