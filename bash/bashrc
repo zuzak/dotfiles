@@ -154,3 +154,8 @@ fi
 alias kc=kubectl
 alias chomp="perl -pi -e 'chomp if eof'"
 alias delete-merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+if [ -e ~/.iterm2_shell_integration.bash ] ; then
+    source ~/.iterm2_shell_integration.bash
+fi
+
