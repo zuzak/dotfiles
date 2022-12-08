@@ -95,7 +95,11 @@ function mm() {
     mpv --no-video --ytdl-format=bestaudio ytdl://ytsearch:"$@"
 }
 
-eval "$(hub alias -s)" # GitHub git slot-in
+if command -v huv
+  then
+    eval "$(hub alias -s)" # GitHub git slot-in
+fi
+
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
